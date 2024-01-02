@@ -9,7 +9,7 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-gap: 1px;
+    grid-gap: 0px;
     width: 500px;
     height: 500px;
     margin:0 auto;
@@ -19,3 +19,4 @@ body {
     background-color: black;
     padding:5px;
 }
+
