@@ -13,12 +13,12 @@ function createGrid() {
             
             gridItem.addEventListener('mousedown', () => {
                 isDragging = true;
-                gridItem.style.backgroundColor = 'white';
+                gridItem.style.backgroundColor = 'black';
             });
 
             gridItem.addEventListener('mousemove', () => {
                 if (isDragging) {
-                    gridItem.style.backgroundColor = 'white';
+                    gridItem.style.backgroundColor = 'black';
                 }
             });
             gridItem.addEventListener('mouseup', () => {
@@ -34,7 +34,6 @@ createGrid();
 
 // user pop up button
 
-const userBtn = document.createElement('button');
 
 
 

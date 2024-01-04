@@ -6,7 +6,27 @@
     <title>Etch A Sketch</title>
     <link rel="stylesheet" href="styles.css"></head>
 <body>
-    <div class="grid" id="myGrid"></div>
+    <div class="container">
+        <div class="title">Etch-a-Sketch</div>
+        <div class="grid" id="myGrid"></div>
+        <block class="options">
+            <block class = "option1">
+                <div class="size">Size: </div>
+                <button id="16x16">Small</button>
+                <button id="32x32">Medium</button>
+                <button id="64x64">Large</button>
+            </block>
+            <div class="option2">
+                <div class="mode">Mode: </div>
+                <button id="colorBtn" class="color">Color</button>
+                <button id="resetBtn" class="reset">Reset</button>
+            </div>
+        </block>
+        <div class="ending">
+            <div class="credits">Built by Kevin Kim</div>
+            <img src="./img/githubgif.gif" alt="github gif" class="github">
+        </div>
+    </div>
     <script src="script.js" defer></script>
 </body>
 </html>

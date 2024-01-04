@@ -4,19 +4,113 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: beige;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 6vh;
+    font-family: cursive;
+    font: bolder;
+    color: rgb(103, 64, 23);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: beige;
+
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 35px);
+    grid-template-rows: repeat(16,35px);
     grid-gap: 0px;
-    width: 500px;
-    height: 500px;
+    width: auto;
+    height: auto;
     margin:0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item {
-    background-color: black;
+    background-color: white;
     padding:5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black; /* Add border to create grid lines */
+    box-sizing: border-box; /* Include border in the element's total size */
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(183, 237, 255);
+    height: 40px; 
+    width: 500px; 
+    margin: 20px auto; 
+    padding: 10px;
+    border-radius: 16px;
+}
+
+.option1 button, .option2 button  {
+    font-family: cursive;
+    background-color: burlywood; /* Change button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 15px; /* Adjust button size */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.options button:hover {
+    background-color: rgb(135, 182, 146); /* Change color on hover */
+}
+
+.size {
+    font-family: cursive;
+    color: rgb(103, 64, 23);
+}
+
+.option1, .option2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.color, .reset {
+    display: flex;
+}
+
+.mode {
+    font-family: cursive;
+    color: rgb(103, 64, 23);
+}
+
+.ending {
+    display:flex;
+    font-family: cursive;
+    font-size: 28px;
+    color: rgb(103, 64, 23);
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: auto;
+    
+}
+
+.ending .github {
+    height: 1.2em;
+    width: 1.2em;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
