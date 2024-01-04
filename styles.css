@@ -29,8 +29,6 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(16, 35px);
-    grid-template-rows: repeat(16,35px);
     grid-gap: 0px;
     width: auto;
     height: auto;
@@ -43,8 +41,8 @@ body {
     background-color: white;
     width: 30px;
     height: 30px;
-    border: 0.5px solid black; /* Add border to create grid lines */
-    box-sizing: border-box; /* Include border in the element's total size */
+    border: 0.5px solid black;
+    box-sizing: border-box;
 }
 
 .options {

@@ -1,7 +1,4 @@
 // Creating a 16x16 grid
-let rows = 16;
-let columns = 16;
-
 const gridContainer = document.getElementById('myGrid');
 const resetContainer = document.getElementById('resetBtn');
 const colorContainer = document.getElementById('colorBtn');
@@ -10,9 +7,12 @@ const mediumContainer = document.getElementById('32x32');
 const largeContainer = document.getElementById('64x64');
 
 // creating grid
-function createGrid() {
-    for (let i = 0; i < rows; i++) {
-        for (let j = 0; j < columns; j++) {
+function createGrid(value) {
+    let gridWidth = 30;
+    gridContainer.style.gridTemplateColumns = `repeat(${value}, ${gridWidth}px)`;
+    gridContainer.style.gridTemplateRows = `repeat(${value}, ${gridWidth}px)`;
+    for (let i = 0; i < value; i++) {
+        for (let j = 0; j < value; j++) {
             const gridItem = document.createElement('div');
             gridItem.className = 'grid-item';
             // leaves a trail when dragging mouse over the grid
@@ -38,26 +38,9 @@ function createGrid() {
 
 // clearing grid and resetting color to black
 function clearReset() {
-    const gridItems = document.querySelectorAll('.grid-item');
-    gridItems.forEach((gridItem) => {
-        gridItem.style.backgroundColor = '';
-        
-        gridItem.addEventListener('mousedown', () => {
-            isDragging = true;
-            gridItem.style.backgroundColor = 'black';
-        });
+    clearGrid();
+    createGrid(16);
 
-        gridItem.addEventListener('mousemove', () => {
-            if (isDragging) {
-                gridItem.style.backgroundColor = 'black';
-            }
-        });
-        gridItem.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-        gridContainer.appendChild(gridItem);
-
-    });
 }
 
 // color options
@@ -101,28 +84,22 @@ function clearGrid() {
 
 // changing display
 function small() {
-    rows = 16;
-    columns = 16;
     clearGrid();
-    createGrid();
+    createGrid(16);
 }
 
 function medium() {
-    rows = 32;
-    columns = 32;
     clearGrid();
-    createGrid();
+    createGrid(32);
 }
 
 function large() {
-    rows = 64;
-    columns = 64;
     clearGrid();
-    createGrid();
+    createGrid(64);
 }
 
 function main() {
-    createGrid();
+    createGrid(16);
     resetContainer.addEventListener('click', clearReset);
     colorContainer.addEventListener('click', colors);
     smallContainer.addEventListener('click', small)
