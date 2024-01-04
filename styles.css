@@ -41,10 +41,9 @@ body {
 
 .grid-item {
     background-color: white;
-    padding:5px;
     width: 30px;
     height: 30px;
-    border: 1px solid black; /* Add border to create grid lines */
+    border: 0.5px solid black; /* Add border to create grid lines */
     box-sizing: border-box; /* Include border in the element's total size */
 }
 
@@ -111,6 +110,6 @@ body {
     height: 1.2em;
     width: 1.2em;
     margin-left: 5px;
-    margin-bottom: 5px;
+    margin-bottom: -6px;
 }
 
