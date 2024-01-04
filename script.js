@@ -5,6 +5,7 @@ const colorContainer = document.getElementById('colorBtn');
 const smallContainer = document.getElementById('16x16');
 const mediumContainer = document.getElementById('32x32');
 const largeContainer = document.getElementById('64x64');
+let isDragging = true;
 
 // creating grid
 function createGrid(value) {
