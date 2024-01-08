@@ -5,6 +5,8 @@ body {
     height: 100vh;
     margin: 0;
     background-color: beige;
+    font-family: cursive;
+    color: rgb(103, 64, 23);
 }
 
 .title {
@@ -22,7 +24,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
     background-color: beige;
 
 }
@@ -101,6 +102,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     margin-top: auto;
+    margin-bottom: auto;
     
 }
 
@@ -110,4 +112,9 @@ body {
     margin-left: 5px;
     margin-bottom: -6px;
 }
+
+.update {
+    margin-bottom: 10vh;
+}
+
 
